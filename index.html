@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="calc.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="display"></div>
+            <div id="buttons">
+                    <button class="operand" type="button" onclick="addOperand(this)">7</button>
+                    <button class="operand" type="button" onclick="addOperand(this)">8</button>
+                    <button class="operand" type="button" onclick="addOperand(this)">9</button>
+                    <button class="operator" type="button" onclick="addOperator(this)">/</button>
+
+                    <button class="operand"  type="button" onclick="addOperand(this)">4</button>
+                    <button class="operand" type="button" onclick="addOperand(this)">5</button>
+                    <button class="operand" type="button" onclick="addOperand(this)">6</button>
+                    <button class="operator" type="button" onclick="addOperator(this)">x</button>
+
+                    <button class="operand" type="button" onclick="addOperand(this)">1</button>
+                    <button class="operand" type="button" onclick="addOperand(this)">2</button>
+                    <button class="operand" type="button" onclick="addOperand(this)">3</button>
+                    <button class="operator" type="button" onclick="addOperator(this)">-</button>
+
+                    <button class="operand" type="button" onclick="addOperand(this)">0</button>
+                    <button class="operand" type="button" onclick="addOperand(this)">.</button>
+                    <button class="operator" type="button" onclick="clearDisplay()">clear</button>
+                    <button class="operator" type="button" onclick="addOperator(this)">+</button>
+                    
+                    <button class="operator" type="button" onclick="addOperator(this)">=</button>
+            </div>
+        </div>
+    </body>
+</html>
