@@ -48,8 +48,8 @@ function updateDisplay() {
         clearDisplay();
         displayValue = 'Error!';
     }
-    document.getElementById('main-display').innerHTML = displayValue;
-    document.getElementById('second-display').innerHTML = previousDisplay;
+    document.getElementById('main-display').textContent = displayValue;
+    document.getElementById('second-display').textContent = previousDisplay;
 }
 
 function clearDisplay() {
@@ -58,8 +58,8 @@ function clearDisplay() {
     operand1 = '0';
     operand2 = '';
     operator = '';
-    document.getElementById('main-display').innerHTML = displayValue;
-    document.getElementById('second-display').innerHTML = previousDisplay;
+    document.getElementById('main-display').textContent = displayValue;
+    document.getElementById('second-display').textContent = previousDisplay;
 }
 
 function deleteChar() {
@@ -112,7 +112,7 @@ function negative() {
 }
 
 function addOperand(element) {
-    input = element.innerHTML;
+    input = element.textContent;
     if (displayValue == '') {
         // case 1: display is empty
         if (input == '.') {
@@ -171,7 +171,7 @@ function addOperand(element) {
 }
 
 function addOperator(element) {
-    input = element.innerHTML;
+    input = element.textContent;
     if (operand1 == '' || operand1 == '.' || operand1 == '-.') {
         // case 1: no operand input
         clearDisplay();
