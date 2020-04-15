@@ -1,5 +1,5 @@
-var displayValue = '0';
 var previousDisplay = '';
+var displayValue = '0';
 var operand1 = '0';
 var operand2 = '';
 var operator = '';
@@ -21,7 +21,7 @@ function divide(x, y) {
 }
 
 function operate(op, x, y) {
-    console.log(x + op + y);
+    console.log(x + " " + op + " " + y);
     x = parseFloat(x);
     y = parseFloat(y);
     switch(op) {
@@ -38,7 +38,7 @@ function operate(op, x, y) {
                 return divide(x,y);
             }
         default:
-            console.log("Error! invalid input recieved: " + op);
+            console.log("Error. Invalid operator input recieved: " + op);
             return NaN;
     }
 }
@@ -53,13 +53,13 @@ function updateDisplay() {
 }
 
 function clearDisplay() {
-    document.getElementById('main-display').innerHTML = '0';
-    document.getElementById('second-display').innerHTML = '';
-    displayValue = '0';
     previousDisplay = '';
+    displayValue = '0';
     operand1 = '0';
     operand2 = '';
     operator = '';
+    document.getElementById('main-display').innerHTML = displayValue;
+    document.getElementById('second-display').innerHTML = previousDisplay;
 }
 
 function deleteChar() {
