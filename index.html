@@ -13,31 +13,36 @@
                 <img src="assets/GitHub-Mark-120px-plus.png" alt="github-logo">
             </a>
         </header>
-        <div id="container">
-            <div id="display"></div>
-            <div id="buttons">
+        <main id="container">
+            <section id="display">
+                <div id="second-display"></div>
+                <div id="main-display">0</div>
+            </section>
+            <section id="button-grid">
+                <button class="operator" type="button" onclick="clearDisplay()">Clear</button>
+                    <button class="operator" type="button" onclick="deleteChar()">Del</button>
+                    <button class="operator" type="button" onclick="negative()">±</button>
+                    <button class="operator" type="button" onclick="addOperator(this)">÷</button>
+
                     <button class="operand" type="button" onclick="addOperand(this)">7</button>
                     <button class="operand" type="button" onclick="addOperand(this)">8</button>
                     <button class="operand" type="button" onclick="addOperand(this)">9</button>
-                    <button class="operator" type="button" onclick="addOperator(this)">/</button>
+                    <button class="operator" type="button" onclick="addOperator(this)">x</button>
 
                     <button class="operand"  type="button" onclick="addOperand(this)">4</button>
                     <button class="operand" type="button" onclick="addOperand(this)">5</button>
                     <button class="operand" type="button" onclick="addOperand(this)">6</button>
-                    <button class="operator" type="button" onclick="addOperator(this)">x</button>
+                    <button class="operator" type="button" onclick="addOperator(this)">-</button>
 
                     <button class="operand" type="button" onclick="addOperand(this)">1</button>
                     <button class="operand" type="button" onclick="addOperand(this)">2</button>
                     <button class="operand" type="button" onclick="addOperand(this)">3</button>
-                    <button class="operator" type="button" onclick="addOperator(this)">-</button>
+                    <button class="operator" type="button" onclick="addOperator(this)">+</button>
 
                     <button class="operand" type="button" onclick="addOperand(this)">0</button>
                     <button class="operand" type="button" onclick="addOperand(this)">.</button>
-                    <button class="operator" type="button" onclick="clearDisplay()">clear</button>
-                    <button class="operator" type="button" onclick="addOperator(this)">+</button>
-                    
-                    <button class="operator" type="button" onclick="addOperator(this)">=</button>
-            </div>
-        </div>
+                    <button class="operator" id="equals" type="button" onclick="addOperator(this)">=</button>
+            </section>
+        </main>
     </body>
 </html>
